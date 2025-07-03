@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>belajar html</title>
+    </head>
+<!-- tabelnya -->
+
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <body>
+        <div class="container">
+            <h1>Selamat Datang Di Halaman Belajar HTML!</h1>
+            <p>Ayo belajar bersama!</p>
+            <p>"Cara membuat Tabel sederhana"</p>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Alamat</th>
+                        <th>NPM</th>
+                        <th>Hobi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nama">Intan Alifiya</td>
+                        <td data-label="Umur">20 tahun</td>
+                        <td data-label="Alamat">Desa</td>
+                        <td data-label="NPM">23105111059</td>
+                        <td data-label="Hobi">Membaca</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nama">Iban</td>
+                        <td data-label="Umur">20 tahun</td>
+                        <td data-label="Alamat">Desa</td>
+                        <td data-label="NPM">2310511100</td>
+                        <td data-label="Hobi">Bermain</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nama">Abdul</td>
+                        <td data-label="Umur">20 tahun</td>
+                        <td data-label="Alamat">Desa</td>
+                        <td data-label="NPM">2310511200</td>
+                        <td data-label="Hobi">Sepak Bola</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #924f0c, #ac550d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 30px;
+            color: #0a0202;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #aa4a30;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 8px 0;
+            color: #090606;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        thead {
+            background-color: #a19b94;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-bottom: 1px solid #957373;
+        }
+
+        thead th {
+            color: #7a3e2f;
+            font-weight: 600;
+        }
+
+        tbody tr:hover {
+            background-color: #fff5ef;
+            transition: background-color 0.3s ease;
+        }
+
+        td {
+            color: #0c0a0a;
+        }
+
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody tr {
+                background: #442920;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                padding: 10px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            }
+
+            tbody td {
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+
+            tbody td::before {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                font-weight: bold;
+                color: #aa4a30;
+                content: attr(data-label);
+            }
+        }
+    </style>
+</head>
+</html>
